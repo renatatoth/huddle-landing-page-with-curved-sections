@@ -1,0 +1,34 @@
+/* VARIABLES */
+$color-primary: #FF52BF;
+$color-primary-light: #FF8FD8;
+$color-font: #00252E;
+$color-bg: #F6FBFF;
+$color-error: #FF4242;
+
+$font-body: 'Open Sans', 'Arial', sans-serif;
+$font-heading: 'Poppins', 'Tahoma', sans-serif;
+
+/* RESET */
+*, *:before, *:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: $font-body;
+}
+
+/* LAYOUT GRID */
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+
+  & a {
+    color: hsl(228, 45%, 44%);
+  }
+}
