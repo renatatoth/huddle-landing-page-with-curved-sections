@@ -1,5 +1,5 @@
-/* VARIABLES */
-/* RESET */
+/***** VARIABLES *****/
+/***** RESET *****/
 *, *:before, *:after {
   box-sizing: inherit;
   padding: 0;
@@ -10,15 +10,250 @@ html {
   box-sizing: border-box;
   font-size: 16px;
   font-family: "Open Sans", "Arial", sans-serif;
+  color: #00252E;
 }
 
-/* LAYOUT GRID */
-.attribution {
-  font-size: 11px;
+/***** LAYOUT *****/
+.section {
+  padding: 5rem 0;
+}
+.section__half {
+  display: flex;
+  justify-content: space-between;
+}
+.section__img {
+  display: block;
+  width: 100%;
+}
+
+.centered {
+  margin: 0 auto;
   text-align: center;
 }
-.attribution a {
-  color: #3e52a3;
+
+/***** HEADER *****/
+.header {
+  margin: 5rem 5rem 10rem;
+  grid-column: 1/-1;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/***** MAIN *****/
+.text-box {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 8rem;
+}
+
+.img-box {
+  width: 50%;
+  padding: 0 8rem;
+}
+
+.section__bg {
+  background-color: #F6FBFF;
+}
+
+/***** FOOTER *****/
+.footer {
+  background-color: #00252E;
+}
+.footer .contacts {
+  list-style: none;
+  font-size: 1rem;
+}
+.footer .contacts__item {
+  margin-bottom: 1rem;
+}
+.footer .contacts__icon {
+  margin-right: 1rem;
+}
+.footer .socials__list {
+  display: flex;
+  list-style: none;
+}
+.footer .socials__item {
+  margin-right: 1.5rem;
+}
+.footer .socials__icon {
+  width: 2rem;
+  filter: invert(1);
+}
+.footer .attribution {
+  font-size: 0.75rem;
+  margin-top: 1.5rem;
+}
+.footer .attribution a {
+  color: #FFF;
+  transition: 0.25s ease-in;
+}
+.footer .attribution a:hover {
+  color: #FF52BF;
+}
+
+/***** HEADINGS *****/
+.heading {
+  font-family: "Poppins", "Tahoma", sans-serif;
+  margin-bottom: 1.375rem;
+}
+.heading__main {
+  font-size: 3rem;
+}
+.heading__section {
+  font-size: 2.5rem;
+  margin-bottom: 2.3rem;
+}
+.heading__light {
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: #FFF;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+/***** TEXT *****/
+.text {
+  display: inline-block;
+  font-size: 1.25rem;
+  line-height: 170%;
+  width: 40%;
+  margin-bottom: 3.4rem;
+}
+.text__section {
+  font-size: 1rem;
+  width: 100%;
+}
+.text__light {
+  width: 50%;
+  font-size: 0.9rem;
+  color: #FFF;
+  line-height: 165%;
+  margin-bottom: 1.9rem;
+}
+
+.record__number {
+  font-size: 6.25rem;
+  font-weight: 700;
+}
+
+.caption {
+  font-size: 1.5rem;
+  opacity: 0.5;
+  margin-top: 1rem;
+}
+
+/***** IMAGES *****/
+.main__img {
+  margin: 5.3rem 0;
+}
+
+.record__icon {
+  text-align: left;
+}
+
+.logo__light {
+  filter: brightness(0) invert(1);
+  margin-bottom: 1.6rem;
+}
+
+.curve {
+  position: relative;
+  margin-top: 20rem;
+}
+.curve__img {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+.curve-bottom {
+  margin-top: 0;
+  margin-bottom: 20rem;
+}
+.curve-bottom .curve__img {
+  top: 0;
+}
+
+/***** BUTTONS *****/
+.btn {
+  display: block;
+  width: fit-content;
+  background-color: #FF52BF;
+  color: #FFF;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6rem;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.btn:hover {
+  background-color: #FF8FD8;
+}
+.btn__main {
+  margin: 1.5rem auto;
+  font-size: 1.25rem;
+  padding: 1.6rem 5rem;
+  transition: 0.25s ease-in;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.17);
+}
+.btn__ghost {
+  background-color: #FFF;
+  color: #FF52BF;
+  border: 2px solid #FF52BF;
+  padding: 0.6rem 2rem;
+}
+.btn__ghost:hover {
+  color: #FF8FD8;
+  border-color: #FF8FD8;
+  background-color: #FFF;
+}
+.btn__form {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.8rem 2.5rem;
+}
+
+/***** FORM *****/
+.form {
+  width: 100%;
+  position: relative;
+}
+.form .error {
+  display: none;
+  position: absolute;
+  bottom: -2rem;
+  font-size: 0.8rem;
+  color: #FF4242;
+}
+.form__label {
+  display: none;
+}
+.form__input {
+  width: 20rem;
+  font-size: 1rem;
+  padding: 0.8rem;
+  margin-right: 1.5rem;
+  font-family: "Open Sans", "Arial", sans-serif;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.form__input:focus {
+  outline: none;
+}
+.form__input:invalid {
+  outline: 1px solid #FF4242;
+}
+.form__input:invalid + .error {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

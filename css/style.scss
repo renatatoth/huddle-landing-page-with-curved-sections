@@ -1,14 +1,18 @@
-/* VARIABLES */
+/***** VARIABLES *****/
 $color-primary: #FF52BF;
 $color-primary-light: #FF8FD8;
 $color-font: #00252E;
 $color-bg: #F6FBFF;
 $color-error: #FF4242;
+$color-white: #FFF;
+$color-shadow: rgba(0, 0, 0, .17);
 
 $font-body: 'Open Sans', 'Arial', sans-serif;
 $font-heading: 'Poppins', 'Tahoma', sans-serif;
 
-/* RESET */
+$transition: .25s ease-in;
+
+/***** RESET *****/
 *, *:before, *:after {
   box-sizing: inherit;
   padding: 0;
@@ -19,16 +23,280 @@ html {
   box-sizing: border-box;
   font-size: 16px;
   font-family: $font-body;
+  color: $color-font;
 }
 
-/* LAYOUT GRID */
+/***** LAYOUT *****/
+.section {
+  padding: 5rem 0;
 
+  &__half {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.attribution {
-  font-size: 11px;
+  &__img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.centered {
+  margin: 0 auto;
   text-align: center;
+}
 
-  & a {
-    color: hsl(228, 45%, 44%);
+/***** HEADER *****/
+.header {
+  margin: 5rem 5rem 10rem;
+  grid-column: 1 / -1;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/***** MAIN *****/
+.text-box {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 8rem;
+}
+
+.img-box {
+  width: 50%;
+  padding: 0 8rem;
+}
+
+.section__bg {
+  background-color: $color-bg;
+}
+
+/***** FOOTER *****/
+.footer {
+  background-color: $color-font;
+
+  .contacts {
+    list-style: none;
+    font-size: 1rem;
+
+    &__item {
+      margin-bottom: 1rem;
+    }
+
+    &__icon {
+      margin-right: 1rem;
+    }
+  }
+
+  .socials {
+    &__list {
+      display: flex;
+      list-style: none;
+    }
+
+    &__item {
+      margin-right: 1.5rem;
+    }
+
+    &__icon {
+      width: 2rem;
+      filter: invert(1);
+    }
+  }
+
+  .attribution {
+    font-size: .75rem;
+    margin-top: 1.5rem;
+
+    & a {
+      color: $color-white;
+      transition: $transition;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+/***** HEADINGS *****/
+.heading {
+  font-family: $font-heading;
+  margin-bottom: 1.375rem;
+
+  &__main {
+    font-size: 3rem;
+  }
+
+  &__section {
+    font-size: 2.5rem;
+    margin-bottom: 2.3rem;
+  }
+
+  &__light {
+    font-family: $font-body;
+    color: $color-white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: .8rem;
+  }
+}
+
+/***** TEXT *****/
+.text {
+  display: inline-block;
+  font-size: 1.25rem;
+  line-height: 170%;
+  width: 40%;
+  margin-bottom: 3.4rem;
+
+  &__section {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  &__light {
+    width: 50%;
+    font-size: .9rem;
+    color: $color-white;
+    line-height: 165%;
+    margin-bottom: 1.9rem;
+  }
+}
+
+.record__number {
+  font-size: 6.25rem;
+  font-weight: 700;
+}
+
+.caption {
+  font-size: 1.5rem;
+  opacity: .5;
+  margin-top: 1rem;
+}
+
+/***** IMAGES *****/
+.main__img {
+  margin: 5.3rem 0;
+}
+
+.record__icon {
+  text-align: left;
+}
+
+.logo__light {
+  filter: brightness(0) invert(1);
+  margin-bottom: 1.6rem;
+}
+
+.curve {
+  position: relative;
+  margin-top: 20rem;
+
+  &__img {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+
+  &-bottom {
+    margin-top: 0;
+    margin-bottom: 20rem;
+
+    & .curve__img {
+      top: 0;
+    }
+  }
+}
+
+/***** BUTTONS *****/
+.btn {
+  display: block;
+  width: fit-content;
+  background-color: $color-primary;
+  color: $color-white;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6rem;
+  text-decoration: none;
+  text-transform: capitalize;
+
+  &:hover {
+    background-color: $color-primary-light;
+  }
+
+  &__main {
+    margin: 1.5rem auto;
+    font-size: 1.25rem;
+    padding: 1.6rem 5rem;
+    transition: $transition;
+    box-shadow: 0 5px 5px $color-shadow;
+  }
+
+  &__ghost {
+    background-color: $color-white;
+    color: $color-primary;
+    border: 2px solid $color-primary;
+    padding: .6rem 2rem;
+
+    &:hover {
+      color: $color-primary-light;
+      border-color: $color-primary-light;
+      background-color: $color-white;
+    }
+  }
+
+  &__form {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: .8rem 2.5rem;
+  }
+}
+
+/***** FORM *****/
+.form {
+  width: 100%;
+  position: relative;
+
+  .error {
+    display: none;
+    position: absolute;
+    bottom: -2rem;
+    font-size: .8rem;
+    color: $color-error;
+  }
+
+  &__label {
+    display: none;
+  }
+
+  &__input {
+    width: 20rem;
+    font-size: 1rem;
+    padding: 0.8rem;
+    margin-right: 1.5rem;
+    font-family: $font-body;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:invalid {
+      outline: 1px solid $color-error;
+
+      & + .error {
+        display: block;
+      }
+    }
   }
 }
