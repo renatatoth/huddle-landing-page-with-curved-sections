@@ -1,0 +1,23 @@
+.header {
+  margin: 5rem 5rem 10rem;
+
+  @media screen and (max-width: $tablet) {
+    margin: 3rem 3rem 7rem;
+  }
+
+  @media screen and (max-width: $phone) {
+    margin: 1.5rem 1.5rem 5rem;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo-box > img{
+    @media screen and (max-width: $tablet) {
+      width: 60%;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.form {
+  width: 100%;
+  position: relative;
+
+  @media screen and (max-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 6rem;
+  }
+
+  .error {
+    display: none;
+    position: absolute;
+    bottom: -1rem;
+    font-size: .8rem;
+    color: $color-error;
+
+    @media screen and (max-width: $laptop) {
+      bottom: 1rem;
+      align-self: flex-start;
+    }
+  }
+
+  &__label {
+    display: none;
+  }
+
+  &__input {
+    width: 20rem;
+    font-size: 1rem;
+    padding: 0.65rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: $font-body;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    @media screen and (max-width: $tablet) {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:invalid {
+      outline: 1px solid $color-error;
+
+      & + .error {
+        display: block;
+      }
+    }
+  }
+}

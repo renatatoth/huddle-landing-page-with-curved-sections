@@ -1,0 +1,71 @@
+.btn {
+  display: block;
+  width: fit-content;
+  background-color: $color-primary;
+  color: $color-white;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6rem;
+  text-decoration: none;
+  text-transform: capitalize;
+
+  @media screen and (max-width: $tablet) {
+    font-size: .8rem;
+  }
+
+  @media screen and (max-width: $phone) {
+    font-size: .675rem;
+  }
+
+  &:hover {
+    background-color: $color-primary-light;
+  }
+
+  &__main {
+    margin: 1.5rem auto;
+    font-size: 1.25rem;
+    padding: 1.6rem 5rem;
+    transition: $transition;
+    box-shadow: 0 5px 5px $color-shadow;
+
+    @media screen and (max-width: $tablet) {
+      font-size: 1rem;
+      padding: 1rem 3rem;
+      margin-bottom: 3rem;
+    }
+
+    @media screen and (max-width: $phone) {
+      font-size: .85rem;
+      padding: .8rem 2.7rem;
+    }
+  }
+
+  &__ghost {
+    background-color: $color-white;
+    color: $color-primary;
+    border: 2px solid $color-primary;
+    padding: .6rem 2rem;
+
+    @media screen and (max-width: $tablet) {
+      padding: .5rem 1.2rem;
+    }
+
+    &:hover {
+      color: $color-primary-light;
+      border-color: $color-primary-light;
+      background-color: $color-white;
+    }
+  }
+
+  &__form {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: .8rem 2.5rem;
+
+    @media screen and (max-width: $tablet) {
+      font-size: 1rem;
+    }
+  }
+}

@@ -8,19 +8,17 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-
     <title>Frontend Mentor | Huddle landing page with curved sections</title>
 </head>
 <body>
     <header class="header">
         <nav class="nav">
             <div class="nav__logo-box">
-                <img src="images/logo.svg" alt="Logo" class="nav__logo">
+                <img src="images/logo.svg" alt="Logo">
             </div>
-            <a href="#" class="btn btn__ghost">Try it free</a>
+            <a href="#" class="btn btn__ghost">Try&nbsp;it&nbsp;free</a>
         </nav>
     </header>
     <main class="main">
@@ -48,11 +46,15 @@
             </div>
         </section>
         <div class="curve">
-            <img src="images/bg-section-top-desktop-1.svg" alt="" class="curve__img">
+            <picture>
+                <source media="(max-width: 768px)" srcset="images/bg-section-top-mobile-1.svg">
+                <source media="(min-width: 769px)" srcset="images/bg-section-top-desktop-1.svg">
+                <img src="images/bg-section-top-desktop-1.svg" alt="Curve" class="curve__img">
+            </picture>
         </div>
         <section class="section section__half section__bg">
             <div class="text-box">
-                <h3 class="heading heading__section">Grow Together</h3>
+                <h2 class="heading heading__section">Grow Together</h2>
                 <p class="text text__section">Generate meaningful discussions with your audience and build a strong,
                     loyal community.
                     Think of the insightful conversations you miss out on with a feedback form.</p>
@@ -62,35 +64,45 @@
             </div>
         </section>
         <div class="curve curve-bottom">
-            <img src="images/bg-section-bottom-desktop-1.svg" alt="" class="curve__img">
+            <picture>
+                <source media="(max-width: 768px)" srcset="images/bg-section-bottom-mobile-1.svg">
+                <source media="(min-width: 769px)" srcset="images/bg-section-bottom-desktop-1.svg">
+                <img src="images/bg-section-bottom-desktop-1.svg" alt="Curve" class="curve__img">
+            </picture>
         </div>
         <section class="section section__half">
             <div class="img-box">
                 <img src="images/illustration-flowing-conversation.svg" alt="" class="section__img">
             </div>
             <div class="text-box">
-                <h3 class="heading heading__section">Flowing Conversations</h3>
+                <h2 class="heading heading__section">Flowing Conversations</h2>
                 <p class="text text__section">You wouldn't paginate a conversation in real life, so why do it online?
-                    Our threads have
-                    just-in-time loading for a more natural flow.</p>
+                    Our threads have just-in-time loading for a more natural flow.</p>
             </div>
         </section>
         <div class="curve">
-            <img src="images/bg-section-top-desktop-2.svg" alt="" class="curve__img">
+            <picture>
+                <source media="(max-width: 768px)" srcset="images/bg-section-top-mobile-2.svg">
+                <source media="(min-width: 769px)" srcset="images/bg-section-top-desktop-2.svg">
+                <img src="images/bg-section-top-desktop-2.svg" alt="Curve" class="curve__img">
+            </picture>
         </div>
         <section class="section section__half section__bg">
             <div class="text-box">
-                <h3 class="heading heading__section">Your Users</h3>
+                <h2 class="heading heading__section">Your Users</h2>
                 <p class="text text__section">It takes no time at all to integrate Huddle with your app's
-                    authentication solution. This means,
-                    once signed in to your app, your users can start chatting immediately.</p>
+                    authentication solution. This means, once signed in to your app, your users can start chatting immediately.</p>
             </div>
             <div class="img-box">
                 <img src="images/illustration-your-users.svg" alt="" class="section__img">
             </div>
         </section>
         <div class="curve curve-bottom">
-            <img src="images/bg-section-bottom-desktop-2.svg" alt="" class="curve__img">
+            <picture>
+                <source media="(max-width: 768px)" srcset="images/bg-section-bottom-mobile-2.svg">
+                <source media="(min-width: 769px)" srcset="images/bg-section-bottom-desktop-2.svg">
+                <img src="images/bg-section-bottom-desktop-2.svg" alt="Curve" class="curve__img">
+            </picture>
         </div>
         <section class="section centered">
             <h2 class="heading heading__section">Ready To Build Your Community?</h2>
@@ -98,51 +110,50 @@
         </section>
     </main>
     <div class="curve">
-        <img src="images/bg-footer-top-desktop.svg" alt="" class="curve__img">
+        <picture>
+            <source media="(max-width: 768px)" srcset="images/bg-footer-top-mobile.svg">
+            <source media="(min-width: 769px)" srcset="images/bg-footer-top-desktop.svg">
+            <img src="images/bg-footer-top-desktop.svg" alt="Curve" class="curve__img">
+        </picture>
     </div>
     <footer class="footer">
         <section class="section section__half">
             <div class="text-box">
-                <div class="footer__logo">
-                    <img src="images/logo.svg" alt="Logo" class="logo__light">
+                <div class="footer__logo-box">
+                    <img src="images/logo.svg" alt="Logo">
                 </div>
                 <p class="text text__light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla
                     quam, hendrerit lacinia vestibulum a, ultrices quis sem.</p>
                 <ul class="contacts text__light">
-                    <li class="contacts__item"><img src="images/icon-phone.svg" class="contacts__icon"
-                                                    alt="Phone icon">Phone:
-                        +1-543-123-4567</li>
-                    <li class="contacts__item"><img src="images/icon-email.svg" class="contacts__icon"
-                                                    alt="Email icon">example@huddle
-                        .com</li>
+                    <li class="contacts__item"><img src="images/icon-phone.svg" class="contacts__icon" alt="Phone icon">
+                        Phone: +1-543-123-4567
+                    </li>
+                    <li class="contacts__item"><img src="images/icon-email.svg" class="contacts__icon" alt="Email icon">
+                        example@huddle.com
+                    </li>
                 </ul>
                 <div class="socials">
                     <ul class="socials__list">
-                        <li class="socials__item"><img src="images/square-facebook.svg" alt="" class="socials__icon">
-                        </li>
-                        <li class="socials__item"><img src="images/instagram.svg" alt="" class="socials__icon"></li>
-                        <li
-                                class="socials__item"><img src="images/square-twitter.svg" alt="" class="socials__icon"></li>
+                        <li class="socials__item"><a href="https://www.facebook.com/"><img src="images/square-facebook.svg" alt="Facebook icon"></a></li>
+                        <li class="socials__item"><a href="https://www.instagram.com"><img src="images/instagram.svg" alt="Instagram icon"></a></li>
+                        <li class="socials__item"><a href="https://www.twitter.com"><img src="images/square-twitter.svg" alt="Twitter icon"></a></li>
                     </ul>
                 </div>
+                <p class="attribution text__light">
+                    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+                    Coded by <a href="#">Renáta Tóth</a>.
+                </p>
             </div>
             <div class="text-box">
                 <h4 class="heading heading__light">Newsletter</h4>
                 <p class="text text__light">To recieve tips on how to grow your community, sign up to our weekly
-                    newsletter. We’ll never
-                    send you spam or pass on your email address</p>
+                    newsletter. We’ll never send you spam or pass on your email address</p>
                 <form class="form text__light">
                     <label for="email" class="form__label">Email</label>
                     <input type="email" id="email" class="form__input">
                     <span class="error">Check your email please</span>
                     <button type="button" class="btn btn__form">Subscribe</button>
-
                 </form>
-                <p class="attribution text__light">
-                    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
-                    Mentor</a>.
-                    Coded by <a href="#">Your Name Here</a>.
-                </p>
             </div>
         </section>
     </footer>

@@ -1,0 +1,75 @@
+.footer {
+  background-color: $color-font;
+
+  & > .section {
+    @media screen and (max-width: $tablet) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__logo-box > img {
+    display: block;
+    filter: brightness(0) invert(1);
+    margin-bottom: 1.6rem;
+    text-align: left;
+
+    @media screen and (max-width: $tablet) {
+      width: 40%;
+      margin-bottom: 1rem;
+    }
+
+    @media screen and (max-width: $phone) {
+      width: 60%;
+    }
+  }
+
+  .contacts {
+    list-style: none;
+    font-size: 1rem;
+
+    &__item {
+      margin-bottom: 1rem;
+    }
+
+    &__icon {
+      margin-right: 1rem;
+    }
+  }
+
+  .socials {
+    &__list {
+      display: flex;
+      list-style: none;
+    }
+
+    &__item {
+      margin-right: 1.5rem;
+      width: 2rem;
+      filter: invert(1);
+
+      @media screen and (max-width: $tablet) {
+        width: 1.5rem;
+        margin-right: .8rem;
+      }
+
+      &:hover {
+        filter: invert(58%) sepia(98%) saturate(1475%) hue-rotate(153deg) brightness(97%) contrast(99%);
+      }
+    }
+  }
+
+  .attribution {
+    font-size: .75rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+
+    & a {
+      color: $color-white;
+      transition: $transition;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}
